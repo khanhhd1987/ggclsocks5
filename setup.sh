@@ -42,12 +42,6 @@ chown nobody:nogroup /var/log/danted.log
 systemctl restart danted
 systemctl enable danted
 
-echo ""
 PROXY="socks5://$USERNAME:$PASSWORD@$IP:$PORT"
 
-# Ghi vào file
-echo "$PROXY" >> /root/proxy.txt
-echo "===================="
-echo "✅ Proxy created:"
-echo "$PROXY"
-echo "===================="
+echo "$PROXY" | tee /root/proxy.txt
