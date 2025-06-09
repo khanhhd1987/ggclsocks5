@@ -43,5 +43,7 @@ systemctl restart danted
 systemctl enable danted
 
 echo ""
-echo "🎉 SOCKS5 Proxy đã sẵn sàng!"
-echo "➡️  Proxy: socks5://$USERNAME:$PASSWORD@$IP:$PORT"
+PROXY="socks5://$USERNAME:$PASSWORD@$EXTERNAL_IP:$PORT"
+
+# Ghi vào file
+echo "$PROXY" >> /root/proxy.txt
