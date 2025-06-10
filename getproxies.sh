@@ -7,9 +7,9 @@ for i in $(seq 1 $MAX); do
 
   # Xen kẽ vùng southeast2-b và southeast1-b
   if (( i % 2 == 1 )); then
-    ZONE="asia-southeast2-b"
+    ZONE="asia-northeast2-a"
   else
-    ZONE="asia-southeast1-b"
+    ZONE="asia-northeast2-a"
   fi
 
   echo -n "$VM: "
