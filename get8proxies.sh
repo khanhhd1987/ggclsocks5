@@ -9,7 +9,7 @@ for i in $(seq 1 $MAX); do
   if (( i % 2 == 1 )); then
     ZONE="asia-northeast2-a"
   else
-    ZONE="asia-northeast2-a"
+    ZONE="asia-northeast1-a"
   fi
 
   echo -n "$VM: "
