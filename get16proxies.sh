@@ -12,13 +12,11 @@ for i in $(seq 1 $MAX); do
     ZONE="asia-northeast1-a"
   fi
 
-  PROXY=$(gcloud compute ssh "$VM" \
+  echo -n "$VM: "
+  gcloud compute ssh "$VM" \
     --zone="$ZONE" \
     --command="sudo cat /root/proxy.txt" \
     --ssh-flag="-o StrictHostKeyChecking=no" \
     --ssh-flag="-o UserKnownHostsFile=/dev/null" \
-    --quiet)
-echo "========== $VM =========="
-  echo "$PROXY"
-echo "========== $VM =========="
+    --quiet
 done
