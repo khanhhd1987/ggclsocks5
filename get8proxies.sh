@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MAX=8
-
+echo -e "\033[1;33mDanh sách $MAX proxy của bạn là:\033[0m"
 for i in $(seq 1 $MAX); do
   VM="proxy-vm-$i"
 
