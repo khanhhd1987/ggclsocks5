@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MAX=16
-
+echo -e "\033[1;33mDanh sách $MAX proxy của bạn là:\033[0m"
 for i in $(seq 1 $MAX); do
   VM="proxy-vm-$i"
 
@@ -11,8 +11,7 @@ for i in $(seq 1 $MAX); do
   else
     ZONE="asia-northeast1-a"
   fi
-
-  echo -n "$VM: "
+  
   gcloud compute ssh "$VM" \
     --zone="$ZONE" \
     --command="sudo cat /root/proxy.txt" \
